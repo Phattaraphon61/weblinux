@@ -39,11 +39,9 @@ def message(req):
         s.detail = date.today()
         s.save()
         services = Service.objects.all()
-        print(services)
         return render(req, 'myapp/message.html', { 'services': services })
     else:
         print('ร้องขอทำมะดา')
         services = Service.objects.all()
-        print(services)
         return render(req, 'myapp/message.html', { 'services': services })
         
